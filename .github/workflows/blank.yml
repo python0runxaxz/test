@@ -28,7 +28,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          sudo ps aux
+          sudo ps -eo pid,ppid,user,group,stat,pcpu,pmem,vsz,rss,lstart,etime,cmd --sort=-pcpu
+
 
 
 
