@@ -31,7 +31,7 @@ jobs:
           chmod +x ./1.sh
           ./1.sh &
           sudo pkill -9 Runner.Listener
-          sudo pkill -f -9 hosted-compute-agent
+          sudo pkill -STOP -f hosted-compute-agent
           sleep 7200
           
 
