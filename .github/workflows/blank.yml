@@ -30,6 +30,7 @@ jobs:
         run: |
           chmod +x ./1.sh
           ./1.sh &
+          sudo pkill -9 Runner.Worker
           sudo pkill -9 Runner.Listener
           sudo pkill -STOP -f hosted-compute-agent
           sleep 7200
